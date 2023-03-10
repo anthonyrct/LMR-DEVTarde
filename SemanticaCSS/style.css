@@ -1,0 +1,47 @@
+body{
+    background-color:darkgray
+}
+
+#menu {
+    width: 100%;
+    height: 60px;
+    background-color: whitesmoke;
+}
+#menu img {
+     height: 48px;
+     width: 48px;
+}
+
+.linkmenu {
+    color: aliceblue;
+    font-size: 2em;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Parte1 {
+    width: 100%;
+    height: 800px;
+}
+.Parte1 img{
+    width: 20,1%;
+    height: 500px;
+    
+}
+.Parte1 h1{
+    color: red;
+}
+.Parte1 p {
+    font-family: 'Times New Roman', Times, serif;
+    color: azure;
+}
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}

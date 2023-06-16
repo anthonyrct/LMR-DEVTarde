@@ -1,0 +1,67 @@
+body {
+    background-color: black;
+    margin: 0;
+    background-image: url(https://i0.wp.com/abglt.org.br/wp-content/uploads/2020/10/wallpaper-pc1-scaled-1.jpg?fit=2560%2C1440&ssl=1);
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 80%;
+}
+
+header nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .hamburger{
+        display: inline;
+    }
+    header nav{
+        display: none;
+    }
+}
+
+.p1{
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 1px;
+}
+.p1 .titulo{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+.titulo h1{
+    font-size: 80px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+.titulo h2{
+    font-size: 40px;
+    color: red;
+}
+.titulo img{
+    width: 10%;
+}

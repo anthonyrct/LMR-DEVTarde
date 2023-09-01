@@ -21,6 +21,14 @@ body{
     align-items: center;
     grid-template-columns: repeat(3, auto);
 }
+
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before{
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
 /* celula */
 .cell{
     width: 100px;
@@ -30,6 +38,10 @@ body{
     justify-content:center;
     align-items: center;
     position: relative;
+}
+
+.cell.x, .cell.circle{
+    cursor: not-allowed;
 }
 
 .cell:nth-child(1),
@@ -54,11 +66,14 @@ body{
 .cell:nth-child(6),
 .cell:nth-child(9){
     border-right: none;
-}
+}/* fim */
+
 
 /* x */
 .cell.x::before,
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before{
     content: "";
     height: calc(100px * 0.15);
     width: calc(100px * 0.9);
@@ -66,16 +81,38 @@ body{
     position: absolute;
 }
 
-.cell.x::before{
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before{
     transform: rotate(45deg);
 }
 
-.cell.x::after{
+.cell.x::after,
+.board.x .cell:hover::after{
     transform: rotate(-45deg);
 }
 
-
+/* circle */
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+    content: "";
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.9);
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+}
 /* Mensagem de vitoria*/
 .winning-message{
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
 }

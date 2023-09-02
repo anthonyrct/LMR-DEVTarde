@@ -116,3 +116,20 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     flex-direction: column;
 }
+
+.winning-message-button{
+   font-size: 2.5rem;
+   background-color:rgba(65, 185, 131, 1);
+   padding: 10px 15px;
+   cursor: pointer;
+   border-radius: 5px;
+   border: none;
+   margin-top: 16px;
+   color: white;
+}
+
+.winning-message-button:hover{
+    color:rgba(65, 185, 131, 1);
+     background-color:white;
+     transition: 0.3s ease;
+}

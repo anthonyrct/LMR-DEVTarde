@@ -3,6 +3,8 @@ const board = document.querySelector("[data-board]");
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
+
+
 const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
@@ -79,6 +81,8 @@ const swapTurns = () => {
 
   setBoardHoverClass();
 };
+
+
 
 const handleClick = (e) => {
   // Colocar a marca (X ou Círculo)

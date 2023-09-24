@@ -1,4 +1,6 @@
 const cellElements = document.querySelectorAll("[data-cell]");
+const contadorXElement = document.querySelector("#contador-jogador-x .contador");
+const contadorCirculoElement = document.querySelector("#contador-jogador-circulo .contador"); 
 const board = document.querySelector("[data-board]");
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
@@ -9,6 +11,8 @@ const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
 let isCircleTurn;
+let contadorX = 0;
+let contadorCirculo = 0;
 
 const winningCombinations = [
   [0, 1, 2],
@@ -34,6 +38,13 @@ const startGame = () => {
   setBoardHoverClass();
   winningMessage.classList.remove("show-winning-message");
 };
+
+// Função para atualizar os contadores
+function atualizarContadores() {
+  contadorXElement.textContent = contadorX;
+  contadorOElement.textContent = contadorCirculo;
+}
+
 
 const endGame = (isDraw) => {
   if (isDraw) {
@@ -94,16 +105,24 @@ const handleClick = (e) => {
   // Verificar por vitória
   const isWin = checkForWin(classToAdd);
 
-  // Verificar por empate
-  const isDraw = checkForDraw();
-
   if (isWin) {
     endGame(false);
-  } else if (isDraw) {
-    endGame(true);
+    if (classToAdd === "x") {
+      contadorX++;
+    } else {
+      contadorCirculo++; 
+    }
+    atualizarContadores();
   } else {
-    // Mudar símbolo
-    swapTurns();
+    // Verificar por empate
+    const isDraw = checkForDraw();
+    
+    if (isDraw) {
+      endGame(true);
+    } else {
+      // Mudar símbolo
+      swapTurns();
+    }
   }
 };
 

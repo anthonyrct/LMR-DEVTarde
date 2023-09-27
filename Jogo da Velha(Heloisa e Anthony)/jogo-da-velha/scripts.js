@@ -1,6 +1,5 @@
 //const que seleciona todas as celulas
 const cellElements = document.querySelectorAll("[data-cell]");
-//const com a borda
 const board = document.querySelector("[data-board]");
 //const com o paragrafo(p) da mensagem de vitoria
 const winningMessageTextElement = document.querySelector(
@@ -12,7 +11,7 @@ const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
 let isCircleTurn;
-//vetor com todas as combinações possiveis de vitorias
+
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -38,7 +37,7 @@ const startGame = () => {
   setBoardHoverClass();
   winningMessage.classList.remove("show-winning-message");
 };
-//const para quando o jogo empatar, aparecer a mensagem de empate, caso contraio apareca as mensagens repectivas de cada simbolo
+
 const endGame = (isDraw) => {
   if (isDraw) {
     winningMessageTextElement.innerText = "Empate!";
@@ -99,7 +98,7 @@ const handleClick = (e) => {
 
   const isWin = checkForWin(classToAdd);
 
-
+  // Verificar por empate
   const isDraw = checkForDraw();
 
   if (isWin) {
@@ -107,6 +106,7 @@ const handleClick = (e) => {
   } else if (isDraw) {
     endGame(true);
   } else {
+    // Mudar símbolo
     swapTurns();
   }
 };

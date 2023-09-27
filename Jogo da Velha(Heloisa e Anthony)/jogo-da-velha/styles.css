@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* estilização do body */
 body {
   height: 100vh;
   width: 100vw;
@@ -13,7 +13,7 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
 }
-
+/* estilização da borda */
 .board {
   display: grid;
   width: 100%;
@@ -25,7 +25,7 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto);
 }
-
+/* Cores de fundo dos simbolos em cinza,para diferenciar quando está e não está colocado */
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.circle .cell:not(.x):not(.circle):hover::after,
@@ -33,7 +33,7 @@ body {
   background: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Célula */
+/* Estilização das Células */
 .cell {
   width: 100px;
   height: 100px;
@@ -43,7 +43,7 @@ body {
   align-items: center;
   position: relative;
 }
-
+/* estilização para mudar o cursor em um simbolo já colocado e para tirar as bordas das celulas*/
 .cell.x,
 .cell.circle {
   cursor: not-allowed;
@@ -73,7 +73,7 @@ body {
   border-right: none;
 }
 
-/* X */
+/* Estilização do X */
 .cell.x::before,
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::after,
@@ -95,7 +95,7 @@ body {
   transform: rotate(-45deg);
 }
 
-/* Circle */
+/* Estilização do Circulo */
 .cell.circle::before,
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after,
@@ -121,7 +121,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   flex-direction: column;
 }
-
+/* Estilização do botão de mensagem de vitoria*/
 .winning-message-button {
   font-size: 2.5rem;
   background-color: rgba(65, 185, 131, 1);
@@ -132,17 +132,17 @@ body {
   margin-top: 16px;
   color: white;
 }
-
+/*  colocando um hover no botão de reiniciar e alterando a cor*/
 .winning-message-button:hover {
   color: rgba(65, 185, 131, 1);
   background-color: white;
 }
-
+/* estilização do texto do botão de reiniciar */
 .winning-message-text {
   color: white;
   font-size: 5rem;
 }
-
+/* estilização da mensagem de vitoria */
 .show-winning-message {
   display: flex;
 }

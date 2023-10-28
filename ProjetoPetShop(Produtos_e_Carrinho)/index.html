@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="partedecima">
-        <h1>PET</h1>
-        <nav class="navbar">
-            
-        </nav>
+    <!--div para os modelos de items na lista e no carrinho-->
+    <div class="modelos-items">
+        <!--items que vão aparecer na lista-->
+        <div class="items">
+            <a href="">
+                <div class="item-imagem"><img src=""></div>
+                <div class="add-items">+</div>
+            </a>
+            <div class="items-preco">R$ --</div>
+            <div class="item-nome">--</div>
+            <div class="item-descricao">--</div>
+        </div>
+
+        <!--como os items vao aparecer no carrinho-->
+        <div class="items-carrinho">
+            <img src="">
+            <div class="item-carrinho-nome">--</div>
+            <div class="carrinho-item-quantidade-area">
+                <button class="carrinho-botao-menos">-</button>
+                <div class="carrinho-quantidade-inicial">1</div>
+                <button class="carrinho-botao-mais">+</button>
+            </div>
+        </div>
     </div>
+    <!--fim da div dos modelos-->
+
+    <!-- menu da versao mobile-->
+    <header>
+        <h1>Pet Hag - O Lugar Para o Seu Pet</h1>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <!-- fim do menu da versao mobile-->
+
+    <!-- conteudo principal do site(desktop) -->
+    <main>
+
+        <h2>produtos:</h2>
+
+        <div class="area-produtos"></div>
+    </main>
+    <!-- fim do conteudo principal -->
+
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="carrinho-area">
+            <div class="icone-fechar">❌</div>
+            <h1>Suas Pizzas</h1>
+            <div class="carrinho"></div>
+            <div class="detalhes do carrinho">
+                <div class="carrinho-subtotal-de-items">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="carrinho--total-item-desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="carrinho-total-item">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="carrinho--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- fim do aside do carrinho -->
+
+    <!-- janela modal .pizzaWindowArea -->
+    <div class="pizzaWindowArea">
+        <div class="pizzaWindowBody">
+            <div class="pizzaInfo--cancelMobileButton">Voltar</div>
+            <div class="pizzaBig">
+                <img src="" />
+            </div>
+            <div class="pizzaInfo">
+                <h1>--</h1>
+                <div class="pizzaInfo--desc">--</div>
+                <div class="pizzaInfo--sizearea">
+                    <div class="pizzaInfo--sector">Tamanho</div>
+                    <div class="pizzaInfo--sizes">
+                        <div data-key="P" class="pizzaInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="pizzaInfo--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--pricearea">
+                    <div class="pizzaInfo--sector">Preço</div>
+                    <div class="pizzaInfo--price">
+                        <div class="pizzaInfo--actualPrice">R$ --</div>
+                        <div class="pizzaInfo--qtarea">
+                            <button class="pizzaInfo--qtmenos">-</button>
+                            <div class="pizzaInfo--qt">1</div>
+                            <button class="pizzaInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                <div class="pizzaInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .pizzaWindowArea -->
+
+    <script src="pizzas.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

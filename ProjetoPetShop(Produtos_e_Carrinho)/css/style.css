@@ -90,7 +90,7 @@ h2 {
     text-align: center;
 }
 
-.area-produtos{
+.area-produtos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -153,13 +153,13 @@ h2 {
     margin-top: 5px;
 }
 
-.pizza-item--desc {
+.item-descricao {
     font-size: 13px;
     color: #555;
     margin-top: 10px;
 }
 
-.pizzaWindowArea {
+.item-area-janela {
     position: fixed;
     left: 0;
     top: 0;
@@ -173,7 +173,7 @@ h2 {
     overflow-y: auto;
 }
 
-.pizzaWindowBody {
+.item-janela-body {
     width: 900px;
     background-color: #FFF;
     border-radius: 10px;
@@ -182,43 +182,43 @@ h2 {
     margin: 20px 0px;
 }
 
-.pizzaBig {
+.item-grande {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pizzaBig--back {
+.item-grande--back {
     position: absolute;
     width: 30px;
     height: 30px;
     background-color: #000;
 }
 
-.pizzaBig img {
+.item-grande img {
     height: 400px;
     width: auto;
 }
 
-.pizzaInfo {
+.item-informacao {
     flex: 1;
     font-family: 'Hepta Slab', Helvetica, Arial;
     padding-bottom: 50px;
 }
 
-.pizzaInfo h1 {
+.item-imformacao h1 {
     margin-top: 50px;
 }
 
-.pizzaInfo .pizzaInfo--desc {
+.item-informacao .descricao-da-informacao-do-item {
     font-size: 15px;
     color: #999;
     margin-top: 10px;
     font-family: 'Lato', Helvetica, Arial;
 }
 
-.pizzaInfo--sector {
+.setor-item-informacao {
     color: #CCC;
     text-transform: uppercase;
     font-size: 14px;
@@ -226,13 +226,13 @@ h2 {
     margin-bottom: 10px;
 }
 
-.pizzaInfo--sizes {
+.item-informacao-tamanhos {
     display: inline-flex;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.pizzaInfo--size {
+.item-informacao-tamanho {
     padding: 10px 15px;
     color: #000;
     background-color: #EEE;
@@ -241,43 +241,43 @@ h2 {
     cursor: pointer;
 }
 
-.pizzaInfo--size:hover {
+.item-informacao-tamanho:hover {
     background-color: #CCC;
 }
 
-.pizzaInfo--size.selected {
+.item-informacao-tamanho-dois {
     background-color: #d32f2f;
     color: #FFF;
 }
 
-.pizzaInfo--size.selected span {
+.item-informacao-tamanho-dois span {
     color: #D6D6D6;
 }
 
-.pizzaInfo--size span {
+.item-informacao-tamanho span {
     font-size: 12px;
     color: #999;
     font-weight: normal;
 }
 
-.pizzaInfo--price {
+.item-informacao-preco {
     display: flex;
     align-items: center;
 }
 
-.pizzaInfo--actualPrice {
+.item-informacao-preco-atual {
     font-size: 28px;
     margin-right: 30px;
 }
 
-.pizzaInfo--qtarea {
+.item-infomacao-quantidade-area {
     display: inline-flex;
     background-color: #EEE;
     border-radius: 10px;
     height: 30px;
 }
 
-.pizzaInfo--qtarea button {
+.item-infomacao-quantidade-area button {
     border: 0;
     background-color: transparent;
     font-size: 17px;
@@ -287,7 +287,7 @@ h2 {
     color: #333;
 }
 
-.pizzaInfo--qt {
+.item-informacao-quantidade-inicial {
     line-height: 30px;
     font-size: 12px;
     font-weight: bold;
@@ -295,7 +295,7 @@ h2 {
     color: #000;
 }
 
-.pizzaInfo--addButton {
+.item-informacao-addButton {
     margin-top: 30px;
     padding: 20px 30px;
     border-radius: 20px;
@@ -306,11 +306,11 @@ h2 {
     margin-right: 30px;
 }
 
-.pizzaInfo--addButton:hover {
+.item-informacao-addButton:hover {
     background-color: #32a345;
 }
 
-.pizzaInfo--cancelButton {
+.item-informacao-cancelarButton {
     display: inline-block;
     cursor: pointer;
 }

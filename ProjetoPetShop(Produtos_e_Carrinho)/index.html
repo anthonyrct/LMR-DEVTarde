@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../ProjetoPetShop(Produtos_e_Carrinho)/css/style.css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
     <!-- menu da versao mobile-->
     <header>
         <h1>Pet Hag - O Lugar Para o Seu Pet</h1>
-        <div class="menu-openner"><span>0</span>🛒</div>
+        <div class="icone-carrinho"><span>0</span>🛒</div>
     </header>
     <!-- fim do menu da versao mobile-->
 
@@ -55,7 +55,7 @@
     <aside>
         <div class="carrinho-area">
             <div class="icone-fechar">❌</div>
-            <h1>Suas Pizzas</h1>
+            <h1>Seus items:</h1>
             <div class="carrinho"></div>
             <div class="detalhes do carrinho">
                 <div class="carrinho-subtotal-de-items">
@@ -77,44 +77,42 @@
     <!-- fim do aside do carrinho -->
 
     <!-- janela modal .pizzaWindowArea -->
-    <div class="pizzaWindowArea">
-        <div class="pizzaWindowBody">
-            <div class="pizzaInfo--cancelMobileButton">Voltar</div>
-            <div class="pizzaBig">
+    <div class="item-area-janela">
+        <div class="item-janela-body">
+            <div class="item-Informacao-botao-cancelar-mobile">Voltar</div>
+            <div class="item-grande">
                 <img src="" />
             </div>
-            <div class="pizzaInfo">
+            <div class="item-informacao">
                 <h1>--</h1>
-                <div class="pizzaInfo--desc">--</div>
-                <div class="pizzaInfo--sizearea">
-                    <div class="pizzaInfo--sector">Tamanho</div>
-                    <div class="pizzaInfo--sizes">
-                        <div data-key="P" class="pizzaInfo--size">PEQUENA <span>--</span></div>
-                        <div data-key="M" class="pizzaInfo--size">MÉDIA <span>--</span></div>
-                        <div data-key="G" class="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                <div class="descricao-da-informacao-do-item">--</div>
+                <div class="tamanho-area-item-informacao">
+                    <div class="setor-item-informacao">Tamanho</div>
+                    <div class="item-informacao-tamanho">
+                        <div data-key="P" class="item-informacao-tamanho">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="item-informacao-tamanho">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="item-informacao-tamanho">GRANDE <span>--</span></div>
                     </div>
                 </div>
-                <div class="pizzaInfo--pricearea">
-                    <div class="pizzaInfo--sector">Preço</div>
-                    <div class="pizzaInfo--price">
-                        <div class="pizzaInfo--actualPrice">R$ --</div>
-                        <div class="pizzaInfo--qtarea">
-                            <button class="pizzaInfo--qtmenos">-</button>
-                            <div class="pizzaInfo--qt">1</div>
-                            <button class="pizzaInfo--qtmais">+</button>
+                <div class="item-inforacao-preco-area">
+                    <div class="setor-item-infomacao">Preço</div>
+                    <div class="item-informacao-preco">
+                        <div class="item-informacao-preco-atual">R$ --</div>
+                        <div class="item-infomacao-quantidade-area">
+                            <button class="item-informacao-quantidade-menos">-</button>
+                            <div class="item-informacao-quantidade-inicial">1</div>
+                            <button class="item-informacao-quantidade-mais">+</button>
                         </div>
                     </div>
                 </div>
-                <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
-                <div class="pizzaInfo--cancelButton">Cancelar</div>
+                <div class="item-informacao-addButton">Adicionar ao carrinho</div>
+                <div class="item-informacao-cancelarButton">Cancelar</div>
             </div>
         </div>
     </div>
     <!-- /janela modal .pizzaWindowArea -->
-
-    <script src="pizzas.js"></script>
+    <script src="js/produtos.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

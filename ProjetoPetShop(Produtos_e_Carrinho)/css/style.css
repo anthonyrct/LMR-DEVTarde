@@ -315,7 +315,7 @@ h2 {
     cursor: pointer;
 }
 
-.pizzaInfo--cancelMobileButton {
+.item-Informacao-botao-cancelar-mobile {
     display: none;
     height: 40px;
     text-align: center;
@@ -323,34 +323,34 @@ h2 {
     margin-bottom: 30px;
 }
 
-.cart {
+.carrinho {
     margin-bottom: 20px;
 }
 
-.cart--item {
+.items-carrinho {
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
 
-.cart--item img {
+.items-carrinho img {
     width: 40px;
     height: 40px;
     margin-right: 20px;
 }
 
-.cart--item-nome {
+.item-carrinho-nome {
     flex: 1;
 }
 
-.cart--item--qtarea {
+.carrinho-item-quantidade-area {
     display: inline-flex;
     background-color: #EEE;
     border-radius: 10px;
     height: 30px;
 }
 
-.cart--item--qtarea button {
+.carrinho-item-quantidade-area button {
     border: 0;
     background-color: transparent;
     font-size: 17px;
@@ -360,7 +360,7 @@ h2 {
     color: #333;
 }
 
-.cart--item--qt {
+.carrinho-item-quantidade-area {
     line-height: 30px;
     font-size: 12px;
     font-weight: bold;
@@ -368,7 +368,7 @@ h2 {
     color: #000;
 }
 
-.cart--totalitem {
+.carrinho-subtotal-de-items {
     padding: 15px 0;
     border-top: 1px solid #d32f2f;
     color: #315970;
@@ -377,7 +377,7 @@ h2 {
     font-size: 15px;
 }
 
-.cart--totalitem span:first-child {
+.carrinho-subtotal-de-items span:first-child {
     font-weight: bold;
 }
 

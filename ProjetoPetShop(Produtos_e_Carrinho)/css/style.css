@@ -381,13 +381,13 @@ h2 {
     font-weight: bold;
 }
 
-.cart--totalitem.big {
+.carrinho-total-items-big {
     font-size: 20px;
     color: #000;
     font-weight: bold;
 }
 
-.cart--finalizar {
+.cart-finalizar {
     padding: 20px 30px;
     border-radius: 20px;
     background-color: #48d05f;
@@ -399,12 +399,12 @@ h2 {
     transition: all ease .2s;
 }
 
-.cart--finalizar:hover {
+.carrinho-finalizar:hover {
     background-color: #35af4a;
 }
 
 @media (max-width:1000px) {
-    .pizza-area {
+    .area-produtos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -414,11 +414,11 @@ h2 {
         flex-direction: column;
     }
 
-    .pizza-area {
+    .carrinho-area {
         display: block;
     }
 
-    .pizza-item {
+    .items {
         max-width: 100%;
     }
 
@@ -445,20 +445,20 @@ h2 {
         width: auto;
     }
 
-    .cart--area {
+    .carrinho-area {
         width: 100vw;
     }
 
-    .menu-closer {
+    .icone-fechar {
         display: block;
     }
 
-    .pizzaWindowArea {
+    .item-area-janela {
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .pizzaWindowBody {
+    .item-janela-body {
         width: 100vw;
         display: block;
         padding: 20px;
@@ -467,41 +467,41 @@ h2 {
         margin: 0;
     }
 
-    .pizzaBig img {
+    .item-grande img {
         width: 75%;
         height: auto;
     }
 
-    .pizzaInfo h1 {
+    .item-informacao h1 {
         margin-top: 20px;
     }
 
-    .pizzaInfo--qtarea {
+    .item-informacao-quantidade-area {
         height: 60px;
     }
 
-    .pizzaInfo--qtarea button {
+    .item-informacao-quantidade-area button {
         font-size: 25px;
         padding: 0px 25px;
     }
 
-    .pizzaInfo--qt {
+    .item-informacao-quantidade-inicial {
         line-height: 60px;
         font-size: 20px;
     }
 
-    .pizzaInfo--addButton {
+    .item-informacao-addButton {
         font-size: 20px;
         display: block;
         text-align: center;
         margin: 30px auto;
     }
 
-    .pizzaInfo--cancelButton {
+    .item-informacao-cancelarButton {
         display: none;
     }
 
-    .pizzaInfo--cancelMobileButton {
+    .item-Informacao-botao-cancelar-mobile {
         display: block;
     }
 
@@ -512,7 +512,7 @@ h2 {
         font-size: 1.5rem;
     }
 
-    .menu-openner {
+    .icone-carrinho {
         font-size: 1.5rem;
     }
 }
@@ -522,7 +522,7 @@ h2 {
         font-size: 1rem;
     }
 
-    .menu-openner {
+    .icone-carrinho  {
         font-size: 1.5rem;
     }
 }

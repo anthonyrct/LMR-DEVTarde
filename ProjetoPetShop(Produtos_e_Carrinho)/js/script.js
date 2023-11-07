@@ -1,7 +1,6 @@
 // aula 05
 // criar a variável modalKey sera global
 let modalKey = 0
-
 // variavel para controlar a quantidade inicial de items na modal
 let quantItems = 1
 
@@ -38,14 +37,14 @@ const botoesFechar = () => {
     selecionaTodos('.item-informacao-cancelarButton, .item-Informacao-botao-cancelar-mobile').forEach((item) => item.addEventListener('click', fecharModal))
 }
 
-const preencheDadosDasPizzas = (pizzaItem, item, index) => {
+const preencheDadosDositems = (items, item, index) => {
     // aula 05
     // setar um atributo para identificar qual elemento foi clicado
-    pizzaItem.setAttribute('data-key', index)
-    pizzaItem.querySelector('.item-imagem img').src = item.img
-    pizzaItem.querySelector('.items-preco').innerHTML = formatoReal(item.price[2])
-    pizzaItem.querySelector('.item nome ').innerHTML = item.name
-    pizzaItem.querySelector('.item-descricao').innerHTML = item.description
+    items.setAttribute('data-key', index)
+    items.querySelector('.item-imagem img').src = item.img
+    items.querySelector('.items-preco').innerHTML = formatoReal(item.price[2])
+    items.querySelector('.item nome ').innerHTML = item.name
+    items.querySelector('.item-descricao').innerHTML = item.description
 }
 
 const preencheDadosModal = (item) => {
@@ -59,7 +58,7 @@ const preencheDadosModal = (item) => {
 const pegarKey = (e) => {
     // .closest retorna o elemento mais proximo que tem a class que passamos
     // do .pizza-item ele vai pegar o valor do atributo data-key
-    let key = e.target.closest('.pizza-item').getAttribute('data-key')
+    let key = e.target.closest('.items').getAttribute('data-key')
     console.log('item clicado ' + key)
     console.log(pizzaJson[key])
 
@@ -91,7 +90,7 @@ const escolherTamanhoPreco = (key) => {
         size.addEventListener('click', (e) => {
             // clicou em um item, tirar a selecao dos outros e marca o q vc clicou
             // tirar a selecao de tamanho atual e selecionar o tamanho grande
-            seleciona('.pizzaInfo--size.selected').classList.remove('selected')
+            seleciona('.item-informacao-tamanho-dois').classList.remove('selected')
             // marcar o que vc clicou, ao inves de usar e.target use size, pois ele é nosso item dentro do loop
             size.classList.add('selected')
 

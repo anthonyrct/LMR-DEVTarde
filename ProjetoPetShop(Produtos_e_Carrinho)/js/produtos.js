@@ -1,10 +1,10 @@
-let pizzaJson = [
+let itemJson = [
     {
         id: 1,
-        name: 'Ração Pedigree - Carne e Vegetais',
-        img: '',
-        price: [54.90, 80.91, 202.86],
-        sizes: [
+        nome: 'Ração Pedigree - Carne e Vegetais',
+        img: 'imagem 1.jpg',
+        preco: [54.90, 80.91, 202.86],
+        tamanho: [
             '3 kgs',
             '6 kgs',
             '18 kgs'
@@ -13,7 +13,7 @@ let pizzaJson = [
     },
     {
         id: 2,
-        name: 'Ração Quartz - Frango e Arroz',
+        nome: 'Ração Quartz - Frango e Arroz',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -25,7 +25,7 @@ let pizzaJson = [
     },
     {
         id: 3,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -37,7 +37,7 @@ let pizzaJson = [
     },
     {
         id: 4,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -49,7 +49,7 @@ let pizzaJson = [
     },
     {
         id: 5,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -61,7 +61,7 @@ let pizzaJson = [
     },
     {
         id: 6,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -73,7 +73,7 @@ let pizzaJson = [
     },
     {
         id: 7,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [
@@ -85,7 +85,7 @@ let pizzaJson = [
     },
     {
         id: 8,
-        name: '',
+        nome: '',
         img: '',
         price: [54.90, 80.91, 202.86],
         sizes: [

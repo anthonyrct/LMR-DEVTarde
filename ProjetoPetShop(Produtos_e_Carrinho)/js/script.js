@@ -42,7 +42,7 @@ const preencheDadosDositems = (items, item, index) => {
     // setar um atributo para identificar qual elemento foi clicado
     items.setAttribute('data-key', index)
     items.querySelector('.item-imagem img').src = item.img
-    items.querySelector('.items-preco').innerHTML = formatoReal(item.price[2])
+    items.querySelector('.items-preco').innerHTML = formatoReal(item.preco[2])
     items.querySelector('.item nome ').innerHTML = item.name
     items.querySelector('.item-descricao').innerHTML = item.description
 }
@@ -51,7 +51,7 @@ const preencheDadosModal = (item) => {
     seleciona('.item-grande').src = item.img
     seleciona('.item-imformacao h1').innerHTML = item.name
     seleciona('.descricao-da-informacao-do-item').innerHTML = item.description
-    seleciona('.item-informacao-preco-atual').innerHTML = formatoReal(item.price[2])
+    seleciona('.item-informacao-preco-atual').innerHTML = formatoReal(item.preco[2])
 }
 
 // aula 05
@@ -60,7 +60,7 @@ const pegarKey = (e) => {
     // do .pizza-item ele vai pegar o valor do atributo data-key
     let key = e.target.closest('.items').getAttribute('data-key')
     console.log('item clicado ' + key)
-    console.log(pizzaJson[key])
+    console.log(itemJson[key])
 
     // garantir que a quantidade inicial de pizzas é 1
     quantItems = 1
@@ -79,7 +79,7 @@ const preencherTamanhos = (key) => {
     selecionaTodos('.item-informacao-tamanho').forEach((size, sizeIndex) => {
         // selecionar o tamanho grande
         (sizeIndex == 2) ? size.classList.add('selected') : ''
-        size.querySelector('span').innerHTML = pizzaJson[key].sizes[sizeIndex]
+        size.querySelector('span').innerHTML = itemJson[key].sizes[sizeIndex]
     })
 }
 
@@ -95,7 +95,7 @@ const escolherTamanhoPreco = (key) => {
             size.classList.add('selected')
 
             // mudar o preço de acordo com o tamanho
-            seleciona('.item-informacao-preco-atual').innerHTML = formatoReal(pizzaJson[key].price[sizeIndex])
+            seleciona('.item-informacao-preco-atual').innerHTML = formatoReal(itemJson[key].preco[sizeIndex])
         })
     })
 }
@@ -122,40 +122,40 @@ const adicionarNoCarrinho = () => {
         console.log('Adicionar no carrinho')
 
         // pegar dados da janela modal atual
-        // qual pizza? pegue o modalKey para usar pizzaJson[modalKey]
+        // qual pizza? pegue o modalKey para usar itemJson[modalKey]
         console.log("item " + modalKey)
         // tamanho
-        let size = seleciona('.item-informacao-tamanho-dois').getAttribute('data-key')
-        console.log("Tamanho " + size)
+        let tamanho = seleciona('.item-informacao-tamanho-dois').getAttribute('data-key')
+        console.log("Tamanho " + tamanho)
         // quantidade
         console.log("Quant. " + quantItems)
         // preco
-        let price = seleciona('.item-informacao-preco-atual').innerHTML.replace('R$&nbsp;', '')
+        let preco = seleciona('.item-informacao-preco-atual').innerHTML.replace('R$&nbsp;', '')
 
         // crie um identificador que junte id e tamanho
         // concatene as duas informacoes separadas por um símbolo, vc escolhe
-        let identificador = pizzaJson[modalKey].id + 't' + size
+        let identificador = itemJson[modalKey].id + 't' + size
 
         // antes de adicionar verifique se ja tem aquele codigo e tamanho
         // para adicionarmos a quantidade
-        let key = cart.findIndex((item) => item.identificador == identificador)
+        let key = carrinho.findIndex((item) => item.identificador == identificador)
         console.log(key)
 
         if (key > -1) {
             // se encontrar aumente a quantidade
-            cart[key].qt += quantItems
+            carrinho[key].quantidade += quantItems
         } else {
             // adicionar objeto pizza no carrinho
-            let pizza = {
+            let item = {
                 identificador,
-                id: pizzaJson[modalKey].id,
-                size, // size: size
-                qt: quantPizzas,
-                price: parseFloat(price) // price: price
+                id: itemJson[modalKey].id,
+                tamanho, // size: size
+                quantidade: quantItems,
+                preco: parseFloat(preco) // preco: preco
             }
-            cart.push(pizza)
-            console.log(pizza)
-            console.log('Sub total R$ ' + (pizza.qt * pizza.price).toFixed(2))
+            carrinho.push(item)
+            console.log(item)
+            console.log('Sub total R$ ' + (item.quantidade * item.preco).toFixed(2))
         }
 
         fecharModal()
@@ -165,8 +165,8 @@ const adicionarNoCarrinho = () => {
 }
 
 const abrirCarrinho = () => {
-    console.log('Qtd de itens no carrinho ' + cart.length)
-    if (cart.length > 0) {
+    console.log('Qtd de itens no carrinho ' + carrinho.length)
+    if (carrinho.length > 0) {
         // mostrar o carrinho
         seleciona('aside').classList.add('show')
         seleciona('header').style.display = 'flex' // mostrar barra superior
@@ -174,7 +174,7 @@ const abrirCarrinho = () => {
 
     // exibir aside do carrinho no modo mobile
     seleciona('.icone-carrinho').addEventListener('click', () => {
-        if (cart.length > 0) {
+        if (carrinho.length > 0) {
             seleciona('aside').classList.add('show')
             seleciona('aside').style.left = '0'
         }
@@ -191,10 +191,10 @@ const fecharCarrinho = () => {
 
 const atualizarCarrinho = () => {
     // exibir número de itens no carrinho
-    seleciona('.icone-carrinho span').innerHTML = cart.length
+    seleciona('.icone-carrinho span').innerHTML = carrinho.length
 
     // mostrar ou nao o carrinho
-    if (cart.length > 0) {
+    if (carrinho.length > 0) {
 
         // mostrar o carrinho
         seleciona('aside').classList.add('show')
@@ -208,54 +208,54 @@ const atualizarCarrinho = () => {
         let total = 0
 
         // para preencher os itens do carrinho, calcular subtotal
-        for (let i in cart) {
+        for (let i in carrinho) {
             // use o find para pegar o item por id
-            let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id)
-            console.log(pizzaItem)
+            let item = itemJson.find((item) => item.id == carrinho[i].id)
+            console.log(item)
 
             // em cada item pegar o subtotal
-            subtotal += cart[i].price * cart[i].qt
-            //console.log(cart[i].price)
+            subtotal += carrinho[i].preco * carrinho[i].quantidade
+            //console.log(cart[i].preco)
 
             // fazer o clone, exibir na telas e depois preencher as informacoes
-            let cartItem = seleciona('.modelos-items .items-carrinho').cloneNode(true)
-            seleciona('.carrinho').append(cartItem)
+            let carrinhoItems = seleciona('.modelos-items .items-carrinho').cloneNode(true)
+            seleciona('.carrinho').append(carrinhoItems)
 
-            let pizzaSizeName = cart[i].size
+            let itemTamanhoNome = carrinho[i].size
 
-            let pizzaName = `${itemNome.name} (${pizzaSizeName})`
+            let itemNome = `${itemNome.name} (${itemTamanhoNome})`
 
             // preencher as informacoes
-            cartItem.querySelector('img').src = itemNome.img
-            cartItem.querySelector('.item-carrinho-nome').innerHTML = itemNome
-            cartItem.querySelector('.carrinho-item-quantidade-area').innerHTML = cart[i].qt
+            carrinhoItems.querySelector('img').src = itemNome.img
+            carrinhoItems.querySelector('.item-carrinho-nome').innerHTML = itemNome
+            carrinhoItems.querySelector('.carrinho-item-quantidade-area').innerHTML = carrinho[i].quantidade
 
             // selecionar botoes + e -
-            cartItem.querySelector('.carrinho-botao-mais').addEventListener('click', () => {
+            carrinhoItems.querySelector('.carrinho-botao-mais').addEventListener('click', () => {
                 console.log('Clicou no botão mais')
                 // adicionar apenas a quantidade que esta neste contexto
-                cart[i].qt++
+                carrinho[i].quantidade++
                 // atualizar a quantidade
                 atualizarCarrinho()
             })
 
-            cartItem.querySelector('.carrinho-botao-menos').addEventListener('click', () => {
+            carrinhoItems.querySelector('.carrinho-botao-menos').addEventListener('click', () => {
                 console.log('Clicou no botão menos')
-                if (cart[i].qt > 1) {
+                if (carrinho[i].quantidade > 1) {
                     // subtrair apenas a quantidade que esta neste contexto
-                    cart[i].qt--
+                    carrinho[i].quantidade--
                 } else {
                     // remover se for zero
-                    cart.splice(i, 1)
+                    carrinho.splice(i, 1)
                 }
 
-                (cart.length < 1) ? seleciona('header').style.display = 'flex' : ''
+                (carrinho.length < 1) ? seleciona('header').style.display = 'flex' : ''
 
                 // atualizar a quantidade
                 atualizarCarrinho()
             })
 
-            seleciona('.carrinho').append(cartItem)
+            seleciona('.carrinho').append(carrinhoItems)
 
         } // fim do for
 
@@ -289,21 +289,21 @@ const finalizarCompra = () => {
 
 // /aula 06
 
-// MAPEAR pizzaJson para gerar lista de pizzas
-pizzaJson.map((item, index) => {
+// MAPEAR itemJson para gerar lista de pizzas
+itemJson.map((item, index) => {
     //console.log(item)
-    let pizzaItem = document.querySelector('.modelos-items .items').cloneNode(true)
+    let Items = document.querySelector('.modelos-items .items').cloneNode(true)
     //console.log(pizzaItem)
     //document.querySelector('.pizza-area').append(pizzaItem)
-    seleciona('.area-produtos').append(pizzaItem)
+    seleciona('.area-produtos').append(Items)
 
     // preencher os dados de cada pizza
-    preencheDadosDasPizzas(pizzaItem, item, index)
+    preencheDadosDasPizzas(Items, item, index)
 
     // pizza clicada
-    pizzaItem.querySelector('.items a').addEventListener('click', (e) => {
+    Items.querySelector('.items a').addEventListener('click', (e) => {
         e.preventDefault()
-        console.log('Clicou na pizza')
+        console.log('Clicou no item')
 
         // aula 05
         let chave = pegarKey(e)
@@ -330,7 +330,7 @@ pizzaJson.map((item, index) => {
 
     botoesFechar()
 
-}) // fim do MAPEAR pizzaJson para gerar lista de pizzas
+}) // fim do MAPEAR itemJson para gerar lista de pizzas
 
 // aula 05
 // mudar quantidade com os botoes + e -

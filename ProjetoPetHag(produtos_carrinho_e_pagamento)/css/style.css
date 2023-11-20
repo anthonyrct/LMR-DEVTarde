@@ -47,7 +47,7 @@ li img {
     height: auto;
 }
 
-#produtos div {
+div #produtos div {
     width: 90%;
     /* Ajuste o valor conforme necessário */
 }

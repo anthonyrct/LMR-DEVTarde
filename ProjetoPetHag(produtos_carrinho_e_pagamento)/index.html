@@ -4,37 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Hag - O Lugar Para o Seu Pet</title>
+    <title>Minha Loja Online</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
 
-    <h1>Bem-vindo(a) para a pagina de produtos</h1>
+    <h1>Bem-vindo à Minha Loja Online</h1>
 
     <!-- Abas para navegação -->
     <div class="container">
         <div id="produtos">
             <h2>Produtos Disponíveis</h2>
-            <ul>
-                <li>Produto 1 - R$ 19.99 <button onclick="adicionarAoCarrinho('Produto 1', 19.99)">Adicionar ao
-                        Carrinho</button></li>
-                <li>Produto 2 - R$ 29.99 <button onclick="adicionarAoCarrinho('Produto 2', 29.99)">Adicionar ao
-                        Carrinho</button></li>
-                <!-- Adicione mais produtos conforme necessário -->
+            <ul id="produtosLista">
+                <!-- Os itens dos produtos serão exibidos aqui -->
             </ul>
         </div>
 
         <div id="carrinho" style="display:none;">
-            <h2>Carrinho</h2>
+            <h2>Carrinho de Compras</h2>
             <ul id="carrinhoLista">
                 <!-- Os itens do carrinho serão exibidos aqui -->
             </ul>
             <p>Total: R$ <span id="carrinhoTotal">0.00</span></p>
+            <button onclick="mostrarPagamento()">Finalizar Compra</button>
         </div>
 
         <div id="pagamento" style="display:none;">
-            <h2>Forma de Pagamento</h2>
+            <h2>Página de Pagamento</h2>
             <form>
                 <label>
                     <input type="radio" name="formaPagamento" value="dinheiro"> Dinheiro
@@ -43,12 +40,18 @@
                     <input type="radio" name="formaPagamento" value="cartao"> Cartão
                 </label>
             </form>
+            <button onclick="finalizarCompra()">Finalizar Pagamento</button>
         </div>
     </div>
 
     <!-- Créditos aos Criadores -->
     <div id="creditos">
-        <p>Criado por  &copy; 2023</p>
+        <p>Criado por [Seu Nome] &copy; 2023</p>
+    </div>
+
+    <!-- Sobreposição de tela de carregamento -->
+    <div id="overlay">
+        <div id="loading"></div>
     </div>
 
     <script src="./script/script.js"></script>

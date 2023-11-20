@@ -42,6 +42,23 @@ li {
     margin-bottom: 10px;
 }
 
+li img {
+    max-width: 100%;
+    height: auto;
+}
+
+#produtos div {
+    width: 90%;
+    /* Ajuste o valor conforme necessário */
+}
+
+#pagamento label {
+    display: block;
+    margin: 10px 0;
+    /* Ajuste os valores conforme necessário */
+}
+
+
 button {
     background-color: #3498db;
     color: #fff;

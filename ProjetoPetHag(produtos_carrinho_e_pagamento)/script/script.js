@@ -1,6 +1,6 @@
 // Dados de exemplo para produtos
 const produtos = [
-    { nome: 'Produto 1', preco: 19.99, imagem: 'caminho-para-imagem-1.jpg', descricao: 'Descrição do Produto 1' },
+    { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'Ração 1' },
     { nome: 'Produto 2', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 2' }
     // Adicione mais produtos conforme necessário
 ];

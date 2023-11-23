@@ -1,7 +1,29 @@
 // Dados de exemplo para produtos
 const produtos = [
-    { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'Ração 1' },
-    { nome: 'Produto 2', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 2' }
+    { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 1' },
+    { nome: 'Produto 2', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 2' },
+    { nome: 'produto 3', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 3' },
+    { nome: 'Produto 4', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do produto 4' },
+    { nome: 'Produto 5', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 5' },
+    { nome: 'produto 6', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 6' },
+    { nome: 'Produto 7', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 7' },
+    { nome: 'Produto 8', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 8' },
+    { nome: 'produto 9', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 9' },
+    { nome: 'Produto 10', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 10' },
+    { nome: 'Produto 11', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 11' },
+    { nome: 'produto 12', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 12' },
+    { nome: 'Produto 13', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 13 ' },
+    { nome: 'Produto 14', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 14' },
+    { nome: 'produto 15', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 15' },
+    { nome: 'Produto 16', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 16' },
+    { nome: 'Produto 17', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 17' },
+    { nome: 'produto 18', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 18' },
+    { nome: 'Produto 19', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 19' },
+    { nome: 'Produto 20', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 20' },
+    { nome: 'produto 21', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 21' },
+    { nome: 'Produto 22', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 22' },
+    { nome: 'Produto 23', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 23' },
+    { nome: 'produto 24', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 24' },
     // Adicione mais produtos conforme necessário
 ];
 

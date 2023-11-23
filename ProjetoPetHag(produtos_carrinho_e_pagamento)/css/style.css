@@ -22,21 +22,16 @@ h1 {
     transition: margin 0.3s ease;
 }
 
-div {
+div #produtos{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
-    width: 30%;
+    width: 100%;
     text-align: center;
     transition: box-shadow 0.3s ease;
 }
-#produtos{
-    justify-content: space-evenly;
-}
-
-
 ul {
     list-style: none;
     padding: 0;

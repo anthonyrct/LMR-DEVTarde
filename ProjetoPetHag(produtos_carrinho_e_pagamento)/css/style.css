@@ -22,7 +22,7 @@ h1 {
     transition: margin 0.3s ease;
 }
 
-div #produtos{
+div #produtos {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,7 @@ div #produtos{
     text-align: center;
     transition: box-shadow 0.3s ease;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -48,13 +49,11 @@ li img {
 
 div #produtos div {
     width: 90%;
-    /* Ajuste o valor conforme necessário */
 }
 
 #pagamento label {
     display: block;
     margin: 10px 0;
-    /* Ajuste os valores conforme necessário */
 }
 
 
@@ -66,6 +65,23 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+#btnVoltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnVoltar:hover {
+    background-color: #2980b9;
 }
 
 button:hover {

@@ -19,6 +19,38 @@
             <ul id="produtosLista">
                 <!-- Os itens dos produtos serão exibidos aqui -->
             </ul>
+            <button id="btnCarrinho" onclick="mostrarCarrinho()">Ir para o Carrinho</button>
+        </div>
+        <!-- Página de Pagamento -->
+        <div id="pagamento" style="display:none;">
+            <h2>Página de Pagamento</h2>
+            <form id="formPagamento">
+                <label>
+                    <input type="radio" name="formaPagamento" value="dinheiro"> Dinheiro
+                </label>
+                <label>
+                    <input type="radio" name="formaPagamento" value="cartao" onclick="mostrarOpcoesCartao()"> Cartão
+                </label>
+                <label>
+                    <input type="radio" name="formaPagamento" value="pix" onclick="mostrarInfoPix()"> Pix
+                </label>
+
+                <div id="opcoesCartao" style="display:none;">
+                    <label>
+                        <input type="radio" name="tipoCartao" value="debito"> Débito
+                    </label>
+                    <label>
+                        <input type="radio" name="tipoCartao" value="credito"> Crédito
+                    </label>
+                </div>
+
+                <div id="infoPix" style="display:none;">
+                    <p>Para realizar o pagamento via Pix, utilize a chave abaixo:</p>
+                    <img src="caminho-para-o-seu-icone-pix.png" alt="Ícone Pix" width="50" height="50">
+                    <p>Chave Pix: 01234567890</p>
+                </div>
+            </form>
+            <button onclick="finalizarCompra()">Finalizar Pagamento</button>
         </div>
 
         <button id="btnVoltar" onclick="voltarPagina()">Voltar</button>

@@ -2,24 +2,24 @@
 const produtos = [
     { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 1' },
     { nome: 'Produto 2', preco: 29.99, imagem: './imagens/ração2.jpg', descricao: 'Descrição do Produto 2' },
-    { nome: 'produto 3', preco: 19.99, imagem: './imagens/ração3.jpg', descricao: 'descricao do prduto 3' },
-    { nome: 'Produto 4', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do produto 4' },
+    { nome: 'produto 3', preco: 19.99, imagem: './imagens/petisco1.jpg', descricao: 'descricao do prduto 3' },
+    { nome: 'Produto 4', preco: 19.99, imagem: './imagens/sache1.jpg', descricao: 'descricao do produto 4' },
     { nome: 'Produto 5', preco: 29.99, imagem: './imagens/coleira1.jpg', descricao: 'Descrição do Produto 5' },
     { nome: 'produto 6', preco: 19.99, imagem: './imagens/coleira2.jpg', descricao: 'descricao do prduto 6' },
     { nome: 'Produto 7', preco: 19.99, imagem: './imagens/coleira3.jpg', descricao: 'descricao do prduto 7' },
-    { nome: 'Produto 8', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 8' },
-    { nome: 'produto 9', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 9' },
-    { nome: 'Produto 10', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 10' },
-    { nome: 'Produto 11', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 11' },
-    { nome: 'produto 12', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 12' },
-    { nome: 'Produto 13', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 13 ' },
-    { nome: 'Produto 14', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 14' },
-    { nome: 'produto 15', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 15' },
-    { nome: 'Produto 16', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 16' },
-    { nome: 'Produto 17', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 17' },
-    { nome: 'produto 18', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 18' },
-    { nome: 'Produto 19', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 19' },
-    { nome: 'Produto 20', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 20' },
+    { nome: 'Produto 8', preco: 29.99, imagem: './imagens/shampoo2.jpg', descricao: 'descricao do prduto 8' },
+    { nome: 'produto 9', preco: 19.99, imagem: './imagens/brinquedo1.jpg', descricao: 'descricao do prduto 9' },
+    { nome: 'Produto 10', preco: 19.99, imagem: './imagens/brinquedo2.jpg', descricao: 'descricao do prduto 10' },
+    { nome: 'Produto 11', preco: 29.99, imagem: './imagens/brinquedo3.jpg', descricao: 'descricao do prduto 11' },
+    { nome: 'produto 12', preco: 19.99, imagem: './imagens/brinquedo4.jpg', descricao: 'descricao do prduto 12' },
+    { nome: 'Produto 13', preco: 19.99, imagem: './imagens/pente1.jpg', descricao: 'descricao do prduto 13 ' },
+    { nome: 'Produto 14', preco: 29.99, imagem: './imagens/pente2.jpg', descricao: 'Descrição do Produto 14' },
+    { nome: 'produto 15', preco: 19.99, imagem: './imagens/escova1.jpg', descricao: 'descricao do prduto 15' },
+    { nome: 'Produto 16', preco: 19.99, imagem: './imagens/escova2.jpg', descricao: 'descricao do prduto 16' },
+    { nome: 'Produto 17', preco: 29.99, imagem: './imagens/pote1.jpg', descricao: 'Descrição do Produto 17' },
+    { nome: 'produto 18', preco: 19.99, imagem: './imagens/pote2.jpg', descricao: 'descricao do prduto 18' },
+    { nome: 'Produto 19', preco: 19.99, imagem: './imagens/pote3.jpg', descricao: 'descricao do prduto 19' },
+    { nome: 'Produto 20', preco: 29.99, imagem: './imagens/pote4.jpg', descricao: 'Descrição do Produto 20' },
     { nome: 'produto 21', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 21' },
     { nome: 'Produto 22', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 22' },
     { nome: 'Produto 23', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 23' },
@@ -44,6 +44,18 @@ function exibirProdutos() {
         produtosLista.appendChild(item);
     });
 }
+
+function mostrarInfoPix() {
+    const infoPix = document.getElementById('infoPix');
+    const pixRadio = document.querySelector('input[name="formaPagamento"][value="pix"]');
+
+    if (pixRadio.checked) {
+        infoPix.style.display = 'block';
+    } else {
+        infoPix.style.display = 'none';
+    }
+}
+
 
 function adicionarAoCarrinho(nome, preco) {
     carrinho.push({ nome, preco });
@@ -131,10 +143,23 @@ function finalizarCompra() {
     // Adicione aqui a lógica para o pagamento
 }
 function voltarPagina() {
-    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'http://localhost:52331/ProjetoPetHag(produtos_carrinho_e_pagamento)/index.html';
+    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'http://localhost:52330/index.html';
 }
 
-// Exibir produtos ao carregar a página
+function adicionarAoCarrinho(nome, preco) {
+    const quantidade = parseInt(prompt(`Quantidade desejada de ${nome}:`, 1)) || 1;
+
+    for (let i = 0; i < quantidade; i++) {
+        carrinho.push({ nome, preco});
+    }
+
+    // Atualiza o carrinho na interface
+    exibirCarrinho();
+}
+function irParaCarrinho() {
+    mostrarCarrinho();
+}
+// Exibi os produtos ao carregar a página
 window.onload = () => {
     exibirProdutos();
     mostrarProdutos(); // Inicialmente, mostra a seção de produtos

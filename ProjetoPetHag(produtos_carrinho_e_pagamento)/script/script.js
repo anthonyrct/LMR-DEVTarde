@@ -2,7 +2,7 @@
 const produtos = [
     { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 1' },
     { nome: 'Produto 2', preco: 29.99, imagem: './imagens/ração2.jpg', descricao: 'Descrição do Produto 2' },
-    { nome: 'produto 3', preco: 19.99, imagem: './imagens/petisco1.jpg', descricao: 'descricao do prduto 3' },
+    { nome: 'Biscoito Pedigree Biscrok Para Cães Adultos Multi 1 kg', preco: 19.99, imagem: './imagens/petisco1.jpg', descricao: 'descricao do prduto 3' },
     { nome: 'Produto 4', preco: 19.99, imagem: './imagens/sache1.jpg', descricao: 'descricao do produto 4' },
     { nome: 'Produto 5', preco: 29.99, imagem: './imagens/coleira1.jpg', descricao: 'Descrição do Produto 5' },
     { nome: 'produto 6', preco: 19.99, imagem: './imagens/coleira2.jpg', descricao: 'descricao do prduto 6' },
@@ -37,13 +37,15 @@ function exibirProdutos() {
         const item = document.createElement('li');
         item.innerHTML = `
             <img src="${produto.imagem}" alt="${produto.nome}" width="50" height="50">
-            ${produto.nome} - R$ ${produto.preco.toFixed(2)}
+            <p>${produto.nome}</p>
+            <p>R$ ${produto.preco.toFixed(2)}</p>
             <p>${produto.descricao}</p>
             <button onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">Adicionar ao Carrinho</button>
         `;
         produtosLista.appendChild(item);
     });
 }
+
 
 function mostrarInfoPix() {
     const infoPix = document.getElementById('infoPix');
@@ -140,17 +142,17 @@ function calcularTotal() {
 
 function finalizarCompra() {
     alert('Compra finalizada! Redirecionando para a página de agradecimento...');
-    // Adicione aqui a lógica para o pagamento
+    
 }
 function voltarPagina() {
-    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'http://localhost:52330/index.html';
+    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'http://localhost:52330/ProjetoPetHag(produtos_carrinho_e_pagamento)/index.html';
 }
 
 function adicionarAoCarrinho(nome, preco) {
     const quantidade = parseInt(prompt(`Quantidade desejada de ${nome}:`, 1)) || 1;
 
     for (let i = 0; i < quantidade; i++) {
-        carrinho.push({ nome, preco});
+        carrinho.push({ nome, preco });
     }
 
     // Atualiza o carrinho na interface
@@ -158,6 +160,20 @@ function adicionarAoCarrinho(nome, preco) {
 }
 function irParaCarrinho() {
     mostrarCarrinho();
+}
+function cancelarCompra() {
+    const confirmacao = confirm('Tem certeza que deseja cancelar a compra? Todos os itens no carrinho serão removidos.');
+
+    if (confirmacao) {
+        // Limpa o carrinho
+        carrinho = [];
+
+        // Atualiza o carrinho na interface
+        exibirCarrinho();
+
+        // Mostra novamente a seção de produtos
+        mostrarProdutos();
+    }
 }
 // Exibi os produtos ao carregar a página
 window.onload = () => {

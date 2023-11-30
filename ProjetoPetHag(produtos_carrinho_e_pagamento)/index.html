@@ -50,7 +50,7 @@
                     <p>Chave Pix: 01234567890</p>
                 </div>
             </form>
-            <button onclick="finalizarCompra()">Finalizar Pagamento</button>
+            <button class="btnFinalizarCompra" onclick="finalizarCompra()">Finalizar Pagamento</button>
         </div>
 
         <button id="btnVoltar" onclick="voltarPagina()">Voltar</button>
@@ -62,22 +62,8 @@
             <p>Total: R$ <span id="carrinhoTotal">0.00</span></p>
             <button onclick="mostrarPagamento()">Finalizar Compra</button>
         </div>
-
-        <div id="pagamento" style="display:none;">
-            <h2>Página de Pagamento</h2>
-            <form>
-                <label>
-                    <input type="radio" name="formaPagamento" value="dinheiro"> Dinheiro
-                </label>
-                <div class="pagamento2">
-                    <label>
-                        <input type="radio" name="formaPagamento" value="cartao"> Cartão
-                    </label>
-                </div>
-            </form>
-            <button onclick="finalizarCompra()">Finalizar Pagamento</button>
-        </div>
     </div>
+    
 
     <!-- Créditos aos Criadores -->
     <div id="creditos">

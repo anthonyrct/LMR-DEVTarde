@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Hag - O Lugar do Seu Pet</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body background="imagens/fundo2.png">
@@ -19,7 +21,14 @@
             <ul id="produtosLista">
                 <!-- Os itens dos produtos serão exibidos aqui -->
             </ul>
-            <button id="btnCarrinho" onclick="mostrarCarrinho()">Ir para o Carrinho</button>
+            <button id="btnCarrinho" onclick="mostrarCarrinho()">
+                <i class="fas fa-shopping-cart">
+                    Ir para o Carrinho
+                </i>
+                <span id="iconeCarrinho" style="display: none;">&#x1F6D2;</span>
+                
+            </button>
+            
         </div>
         <!-- Página de Pagamento -->
         <div id="pagamento" style="display:none;">
@@ -54,16 +63,18 @@
         </div>
 
         <button id="btnVoltar" onclick="voltarPagina()">Voltar</button>
-        <div id="carrinho" style="display:none;">
+
+        <div id="carrinho" style="display:none;" class="produtos-container">
             <h2>Carrinho de Compras</h2>
             <ul id="carrinhoLista">
                 <!-- Os itens do carrinho serão exibidos aqui -->
             </ul>
             <p>Total: R$ <span id="carrinhoTotal">0.00</span></p>
-            <button onclick="mostrarPagamento()">Finalizar Compra</button>
+            <button class="btnFinalizarCompra" onclick="mostrarPagamento()">Finalizar Compra</button>
+            <button class="btnCancelarCompra" onclick="cancelarCompra()">Cancelar Compra</button>
         </div>
     </div>
-    
+
 
     <!-- Créditos aos Criadores -->
     <div id="creditos">

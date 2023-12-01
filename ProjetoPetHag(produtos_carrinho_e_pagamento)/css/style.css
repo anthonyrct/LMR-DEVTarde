@@ -67,6 +67,46 @@ div #produtos div {
     justify-content: center;
 }
 
+#pagamento {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+#pagamentoLista {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 1%;
+}
+
+#pagamentoLista li {
+    margin-bottom: 50px;
+    color: #333;
+    width: 100%;
+    height: 40vh;
+}
+
+#pagamentoLista li img {
+    width: 30%;
+    height: 20vh;
+}
+
+#pagamentoLista div {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #pagamento label {
     display: block;
     margin: 10px 0;
@@ -148,8 +188,53 @@ button#btnCarrinho:hover {
     transition: background-color 0.3s ease;
 }
 
+.opcoesCartao {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.opcoesCartao label {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.opcoesCartao label:hover {
+    background-color: #2980b9;
+}
+
 .btnFinalizarCompra:hover {
     background-color: #27ae60;
+}
+
+#carrinhoLista {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 1%;
+}
+
+#carrinhoLista li {
+    margin-bottom: 20px;
+    color: #333;
+    width: 100%;
+    height: 20vh;
+}
+
+#carrinhoLista li img {
+    width: 30%;
+    height: 20vh;
+}
+
+#carrinhoLista div {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

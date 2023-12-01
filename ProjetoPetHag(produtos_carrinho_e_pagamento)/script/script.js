@@ -56,6 +56,30 @@ function mostrarInfoPix() {
     } else {
         infoPix.style.display = 'none';
     }
+} function mostrarOpcoesCartao() {
+    const opcoesCartao = document.getElementById('opcoesCartao');
+    const pagamentoLista = document.getElementById('pagamentoLista');
+    const cartaoRadio = document.querySelector('input[name="formaPagamento"][value="cartao"]');
+
+    if (cartaoRadio.checked) {
+        opcoesCartao.style.display = 'block';
+        mostrarSenhaCartao();
+    } else {
+        opcoesCartao.style.display = 'none';
+    }
+}
+
+function mostrarSenhaCartao() {
+    const senhaCartaoInput = document.querySelector('input[name="senhaCartao"]');
+    senhaCartaoInput.style.display = 'block';
+}
+
+function exibirItensPagamento() {
+    const pagamentoLista = document.getElementById('pagamentoLista');
+    pagamentoLista.innerHTML = '';
+
+    // Adapte o código conforme necessário para exibir os itens de pagamento
+    // por exemplo, exibindo informações sobre o método de pagamento selecionado.
 }
 
 
@@ -69,18 +93,20 @@ function adicionarAoCarrinho(nome, preco) {
 function exibirCarrinho() {
     const carrinhoLista = document.getElementById('carrinhoLista');
     carrinhoLista.innerHTML = '';
-
     carrinho.forEach(item => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        listItem.innerHTML = `
+            <img src="${item.imagem}" alt="${item.nome}" width="50" height="50">
+            <p>${item.nome} - R$ ${item.preco.toFixed(2)}</p>
+            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+        `;
         carrinhoLista.appendChild(listItem);
     });
-
-    // Atualizar o total
+    // Atualiza o total
     const carrinhoTotal = document.getElementById('carrinhoTotal');
     carrinhoTotal.textContent = calcularTotal().toFixed(2);
 
-    // Exibir a seção de carrinho
+    // Exibi a seção de carrinho
     mostrarCarrinho();
 }
 
@@ -141,11 +167,15 @@ function calcularTotal() {
 }
 
 function finalizarCompra() {
+    // Ocultar ícone de carrinho
+    const iconeCarrinho = document.getElementById('iconeCarrinho');
+    iconeCarrinho.style.display = 'none';
+
     alert('Compra finalizada! Redirecionando para a página de agradecimento...');
-    
+
 }
 function voltarPagina() {
-    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'http://localhost:52330/ProjetoPetHag(produtos_carrinho_e_pagamento)/index.html';
+    window.history.length > 1 ? window.history.go(-1) : window.location.href = 'index.html';
 }
 
 function adicionarAoCarrinho(nome, preco) {
@@ -154,7 +184,9 @@ function adicionarAoCarrinho(nome, preco) {
     for (let i = 0; i < quantidade; i++) {
         carrinho.push({ nome, preco });
     }
-
+    // Exibir ícone de carrinho
+    const iconeCarrinho = document.getElementById('iconeCarrinho');
+    iconeCarrinho.style.display = 'inline';
     // Atualiza o carrinho na interface
     exibirCarrinho();
 }

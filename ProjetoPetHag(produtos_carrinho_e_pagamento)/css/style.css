@@ -16,10 +16,19 @@ h1 {
 .container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 20px auto;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* margin: 20px auto; */
     transition: margin 0.3s ease;
+}
+
+.cart {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 div #produtos {
@@ -27,41 +36,69 @@ div #produtos {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0px;
-    padding: 20px;
+    /* padding: 20px; */
     width: 100%;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
+    text-align: center;
 
 
     transition: box-shadow 0.3s ease;
 }
 
+.produto1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+}
+
 ul {
+    width: 100%;
     list-style: none;
-    padding: 0;
+    padding: 45px;
+
+
     display: grid;
-    grid-template-columns: 32% 32% 32%;
-    gap: 1%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(6, 17%);
+
 
 }
 
 li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
     margin-bottom: 50px;
     color: #333;
-    width: 100%;
-    height: 40vh;
+    width: 95%;
+    height: 50vh;
 
+
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-li img {
-    width: 30%;
-    height: 20vh;
+img {
+    width: 60%;
+    height: 25vh;
 }
 
 div #produtos div {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,9 +168,11 @@ button {
     color: #fff;
     border: none;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 80%;
+    height: 4.5vh;
 }
 
 #btnVoltar {
@@ -147,6 +186,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 10%;
+    height: 5vh;
 }
 
 #btnVoltar:hover {
@@ -165,6 +206,8 @@ button#btnCarrinho {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 10%;
+    height: 5vh;
 }
 
 #btnCarrinho {
@@ -245,6 +288,7 @@ div#creditos {
     margin-top: 20px;
     border-radius: 8px;
 }
+
 
 /* Estilos para telas menores (responsividade) */
 @media only screen and (max-width: 768px) {

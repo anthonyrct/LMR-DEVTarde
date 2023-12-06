@@ -17,18 +17,21 @@
     <!-- Abas para navegação -->
     <div class="container">
         <div id="produtos">
-            <h2>Produtos Disponíveis</h2>
-            <ul id="produtosLista">
-                <!-- Os itens dos produtos serão exibidos aqui -->
-            </ul>
+            <h2>Produtos Disponíveis:</h2>
+            <div class="produto1">
+                <ul id="produtosLista">
+                    <!-- Os itens dos produtos serão exibidos aqui -->
+                </ul>
+            </div>
+
             <button id="btnCarrinho" onclick="mostrarCarrinho()">
                 <i class="fas fa-shopping-cart">
                     Ir para o Carrinho
                 </i>
                 <span id="iconeCarrinho" style="display: none;">&#x1F6D2;</span>
-                
+
             </button>
-            
+
         </div>
         <!-- Página de Pagamento -->
         <div id="pagamento" style="display:none;">
@@ -64,7 +67,12 @@
 
         <button id="btnVoltar" onclick="voltarPagina()">Voltar</button>
 
-        <div id="carrinho" style="display:none;" class="produtos-container">
+       
+
+    </div>
+
+    <div class="cart">
+        <div id="carrinho" style="display:block;" class="produtos-container">
             <h2>Carrinho de Compras</h2>
             <ul id="carrinhoLista">
                 <!-- Os itens do carrinho serão exibidos aqui -->
@@ -84,8 +92,8 @@
     <div id="overlay">
         <div id="loading"></div>
     </div>
-
-    <script src="./script/script.js"></script>
 </body>
+
+<script src="./script/script.js"></script>
 
 </html>

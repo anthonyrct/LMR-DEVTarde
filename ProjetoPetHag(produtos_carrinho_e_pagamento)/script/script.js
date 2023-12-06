@@ -20,10 +20,10 @@ const produtos = [
     { nome: 'produto 18', preco: 19.99, imagem: './imagens/pote2.jpg', descricao: 'descricao do prduto 18' },
     { nome: 'Produto 19', preco: 19.99, imagem: './imagens/pote3.jpg', descricao: 'descricao do prduto 19' },
     { nome: 'Produto 20', preco: 29.99, imagem: './imagens/pote4.jpg', descricao: 'Descrição do Produto 20' },
-    { nome: 'produto 21', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 21' },
+    { nome: 'produto 21', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 21' },
     { nome: 'Produto 22', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 22' },
-    { nome: 'Produto 23', preco: 29.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'Descrição do Produto 23' },
-    { nome: 'produto 24', preco: 19.99, imagem: 'caminho-para-imagem-2.jpg', descricao: 'descricao do prduto 24' },
+    { nome: 'Produto 23', preco: 29.99, imagem: './imagens/ração1.jpg', descricao: 'Descrição do Produto 23' },
+    { nome: 'produto 24', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 24' },
     // Adicione mais produtos conforme necessário
 ];
 

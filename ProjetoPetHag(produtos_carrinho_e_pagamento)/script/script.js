@@ -1,8 +1,8 @@
 // Dados de exemplo para produtos
 const produtos = [
-    { nome: 'Produto 1', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'descricao do prduto 1' },
-    { nome: 'Produto 2', preco: 29.99, imagem: './imagens/ração2.jpg', descricao: 'Descrição do Produto 2' },
-    { nome: 'Biscoito Pedigree Biscrok Para Cães Adultos Multi 1 kg', preco: 19.99, imagem: './imagens/petisco1.jpg', descricao: 'descricao do prduto 3' },
+    { nome: 'Ração Pedigree Carne e Vegetais Para Cães Adultos 10.1 kg', preco: 19.99, imagem: './imagens/ração1.jpg', descricao: 'Graças à sua textura, os grãos de PEDIGREE ajudam a reduzir a formação do tártaro e a manter os dentes e as gengivas saudáveis.' },
+    { nome: 'Ração Special Dog Carne 20Kg', preco: 172.90, imagem: './imagens/ração2.jpg', descricao: 'Seus componentes ajudam o pet a ter a pele e pelagem mais saudável e brilhante, além de auxiliarem na redução dos odores das fezes e fortalecimento da saúde.' },
+    { nome: 'Biscoito Pedigree Biscrok Para Cães Adultos Multi 1 kg', preco: 19.99, imagem: './imagens/petisco1.jpg', descricao: 'um snack crocante para cães adultos com 4 sabores irresistíveis e que seu cão vai adorar: Leite, Cenoura, Fígado e Espinafre' },
     { nome: 'Produto 4', preco: 19.99, imagem: './imagens/sache1.jpg', descricao: 'descricao do produto 4' },
     { nome: 'Produto 5', preco: 29.99, imagem: './imagens/coleira1.jpg', descricao: 'Descrição do Produto 5' },
     { nome: 'produto 6', preco: 19.99, imagem: './imagens/coleira2.jpg', descricao: 'descricao do prduto 6' },
@@ -130,6 +130,13 @@ function mostrarCarrinho() {
     document.body.style.backgroundColor = '#fff';
     // Adicione a transição de margem no contêiner
     document.querySelector('.container').style.margin = '40px';
+}
+function verificarCarrinho() {
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio. Adicione produtos antes de finalizar a compra.');
+    } else {
+        mostrarPagamento();
+    }
 }
 
 function mostrarPagamento() {

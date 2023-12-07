@@ -81,20 +81,20 @@ li {
     margin-bottom: 50px;
     color: #333;
     width: 95%;
-    height: 50vh;
+    height: 55vh;
 
 
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    /* border-width: 2px; */
 
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
 img {
-    width: 60%;
-    height: 25vh;
+    width: 50%;
+    height: 15vh;
 }
 
 div #produtos div {
@@ -167,12 +167,12 @@ button {
     background-color: #3498db;
     color: #fff;
     border: none;
-    padding: 8px 12px;
-    border-radius: 30px;
+    padding: 10px 12px;  
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 80%;
-    height: 4.5vh;
+    /* height: 4.5vh; */
 }
 
 #btnVoltar {

@@ -17,25 +17,95 @@
     <h1>Bem-vindo(a) a pagina de produtos</h1>
 
     <!-- Abas para navegação -->
-    <div class="container" >
+    <div class="container">
 
-        <div id="produtos">
-            <h2>Produtos Disponíveis:</h2>
-            <div class="produto1">
-                <ul id="produtosLista">
-                    <!-- Os itens dos produtos serão exibidos aqui -->
-                </ul>
+        <!-- Produtos para Cachorro -->
+        <div class="categoria" id="cachorro">
+            <h2>Produtos para Cachorro</h2>
+            <div class="produto-card">
+                <img class="produto-img" src="cachorro1.jpg" alt="Ração para Cachorro">
+                <div class="produto-info">
+                    <div class="produto-nome">Ração para Cachorro</div>
+                    <div class="produto-preco">R$ 19.99</div>
+                    <div class="produto-descricao">Ração nutritiva para cães adultos.</div>
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
             </div>
 
-            <button id="btnCarrinho" onclick="mostrarCarrinho()">
-                <i class="fas fa-shopping-cart">
-                    Ir para o Carrinho
-                </i>
-                <span id="iconeCarrinho" style="display: none;">&#x1F6D2;</span>
-
-            </button>
-
+            <div class="produto-card">
+                <!-- Adicione mais cards de produtos para cachorro conforme necessário -->
+                <img class="produto-img" src="cachorro1.jpg" alt="Ração para Cachorro">
+                <div class="produto-info">
+                    <div class="produto-nome">Ração para Cachorro</div>
+                    <div class="produto-preco">R$ 19.99</div>
+                    <div class="produto-descricao">Ração nutritiva para cães adultos.</div>
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
         </div>
+
+        <!-- Produtos para Gato -->
+        <div class="categoria" id="gato">
+            <h2>Produtos para Gato</h2>
+            <div class="produto-card">
+                <img class="produto-img" src="gato1.jpg" alt="Ração para Gato">
+                <div class="produto-info">
+                    <div class="produto-nome">Ração para Gato</div>
+                    <div class="produto-preco">R$ 15.99</div>
+                    <div class="produto-descricao">Ração saborosa para gatos exigentes.</div>
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="produto-card">
+                <!-- Adicione mais cards de produtos para gato conforme necessário -->
+            </div>
+        </div>
+
+        <!-- Produtos para Pássaro -->
+        <div class="categoria" id="passaro">
+            <h2>Produtos para Pássaro</h2>
+            <div class="produto-card">
+                <img class="produto-img" src="passaro1.jpg" alt="Sementes para Pássaro">
+                <div class="produto-info">
+                    <div class="produto-nome">Sementes para Pássaro</div>
+                    <div class="produto-preco">R$ 9.99</div>
+                    <div class="produto-descricao">Mistura de sementes nutritivas para pássaros.</div>
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="produto-card">
+                <!-- Adicione mais cards de produtos para pássaro conforme necessário -->
+            </div>
+        </div>
+
+        <!-- Produtos para Peixe -->
+        <div class="categoria" id="peixe">
+            <h2>Produtos para Peixe</h2>
+            <div class="produto-card">
+                <img class="produto-img" src="peixe1.jpg" alt="Comida para Peixe">
+                <div class="produto-info">
+                    <div class="produto-nome">Comida para Peixe</div>
+                    <div class="produto-preco">R$ 5.99</div>
+                    <div class="produto-descricao">Alimento balanceado para peixes tropicais.</div>
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="produto-card">
+                <!-- Adicione mais cards de produtos para peixe conforme necessário -->
+            </div>
+        </div>
+        <button id="btnCarrinho" onclick="mostrarCarrinho()">
+            <i class="fas fa-shopping-cart">
+                Ir para o Carrinho
+            </i>
+            <span id="iconeCarrinho" style="display: none;">&#x1F6D2;</span>
+
+        </button>
+
+
         <!-- Página de Pagamento -->
         <div id="pagamento" style="display:none;">
             <h2>Página de Pagamento</h2>
@@ -70,12 +140,12 @@
 
         <button id="btnVoltar" onclick="voltarPagina()">Voltar</button>
 
-       
+
 
     </div>
 
     <div class="cart">
-        <div id="carrinho" style="display:block;" class="produtos-container">
+        <div id="carrinho" style="display:none;" class="produtos-container">
             <h2>Carrinho de Compras</h2>
             <ul id="carrinhoLista">
                 <!-- Os itens do carrinho serão exibidos aqui -->

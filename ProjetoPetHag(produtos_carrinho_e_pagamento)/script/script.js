@@ -82,32 +82,48 @@ function exibirItensPagamento() {
     // por exemplo, exibindo informações sobre o método de pagamento selecionado.
 }
 
-
 function adicionarAoCarrinho(nome, preco) {
-    carrinho.push({ nome, preco });
-
-    // Atualizar o carrinho na interface
-    exibirCarrinho();
+    carrinho.push({ nome, preco })
+    atualizarCarrinho();
 }
 
-function exibirCarrinho() {
-    const carrinhoLista = document.getElementById('carrinhoLista');
-    carrinhoLista.innerHTML = '';
-    carrinho.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `
-            <img src="${item.imagem}" alt="${item.nome}" width="50" height="50">
-            <p>${item.nome} - R$ ${item.preco.toFixed(2)}</p>
-            <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
-        `;
-        carrinhoLista.appendChild(listItem);
-    });
-    // Atualiza o total
-    const carrinhoTotal = document.getElementById('carrinhoTotal');
-    carrinhoTotal.textContent = calcularTotal().toFixed(2);
 
-    // Exibi a seção de carrinho
+function atualizarCarrinho() {
+    const carrinhoLista = document.getElementById("carrinhoLista");
+    const carrinhoTotal = document.getElementById("carrinhoTotal");
+
+    carrinhoLista.innerHTML = "";
+    let total = 0;
+
+    carrinho.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        carrinhoLista.appendChild(li);
+        total += item.preco;
+    });
+
+    carrinhoTotal.textContent = total.toFixed(2);
+}
+
+
+ /*    carrinho.push({ nome, preco });
+
+    // Atualizar o carrinho na interface
     mostrarCarrinho();
+    carrinho.forEach(item => {
+        const cardContainer = document.createElement('div');
+        cardContainer.classList.add('cart-card');
+
+        const cardContent = `
+        <img src="${item.imagem}" alt="${item.nome}" width="50" height="50">
+        <p>${item.nome} - R$ ${item.preco.toFixed(2)}</p>
+        <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+        <label for="quantidade-${item.nome}">Quantidade:</label>
+        <input type="number" id="quantidade-${item.nome}" value="1" min="1">
+    `;
+        cardContainer.innerHTML = cardContent;
+        carrinhoLista.appendChild(cardContainer);
+    }); */
 }
 
 function mostrarProdutos() {
@@ -185,7 +201,8 @@ function voltarPagina() {
     window.history.length > 1 ? window.history.go(-1) : window.location.href = 'index.html';
 }
 
-function adicionarAoCarrinho(nome, preco) {
+//Este é o do Alert
+/* function adicionarAoCarrinho(nome, preco) {
     const quantidade = parseInt(prompt(`Quantidade desejada de ${nome}:`, 1)) || 1;
 
     for (let i = 0; i < quantidade; i++) {
@@ -196,7 +213,7 @@ function adicionarAoCarrinho(nome, preco) {
     iconeCarrinho.style.display = 'inline';
     // Atualiza o carrinho na interface
     exibirCarrinho();
-}
+} */
 function irParaCarrinho() {
     mostrarCarrinho();
 }

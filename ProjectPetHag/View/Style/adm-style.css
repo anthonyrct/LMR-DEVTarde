@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.containerADM {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+}
+
+.contaiTit {
+
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px black solid;
+    margin-bottom: 5%;
+}
+
+.btnEscolha {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: aqua;
+}
+
+
+.btnEscolha input {
+    width: 100%;
+    height: 5vh;
+
+
+    border-bottom: 2px black solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.btnEscolha input :hover {
+    background-color: yellow;
+
+}
+
+
+.btnEscolha .Usu{
+    border-bottom: 2px black solid;
+    border-top: none;
+    border-left: none;
+    border-right: 2px black solid;
+
+}
+.containerDisplay {
+    height: 100%;
+    background-color: rgb(247, 247, 0);
+}

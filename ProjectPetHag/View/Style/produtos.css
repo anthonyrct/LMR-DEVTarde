@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 400vh;
+
+    background-color: aqua;
+    background-image: url(../img/Cadastro_Fundo.png);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contain-fund-prod {
+    width: 90%;
+    height: 380vh;
+
+    margin-bottom: 4%;
+
+    border-radius: 50px;
+
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.tit-pag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+.produt {
+    width: 95%;
+    height: 200vh;
+    
+    background-color: rgb(255, 255, 255);
+
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: repeat(6, 31%);
+
+
+    gap: 2%;
+}
+
+  
+.card-prod {
+    border: solid black 3px;
+    width: 95%;
+    height: 60vh;
+
+    border-radius: 10px;
+
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-card {
+    width: 100%;
+    height: 30vh;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-card img {
+    width: 100%;
+    height: 28vh;
+}
+
+.estrelas {
+    width: 100%;
+    height: 3vh;
+
+    display: flex;
+    align-items: center;
+    padding-inline-start: 5%;
+    justify-content: flex-start;
+
+    font-size: 70%;
+}
+
+.estrelas img {
+    padding: 1%;
+    height: 2vh;
+}
+
+.tit-card {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    word-break: break-word;
+
+    height: 7vh;
+}
+
+.tit-card p {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.preco-card {
+    width: 100%;
+    height: 4vh;
+
+    /* Font */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.preco-card h3 {
+
+    padding-inline-start: 5%;
+}
+
+.desc-card {
+    width: 98%;
+    height: 5vh;
+
+    padding-inline-start: 5%;
+    
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.desc-card h4 {
+    padding: 1%;
+    text-decoration: line-through;
+}
+
+.btn-card {
+    width: 100%;
+    height: 7vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-card input {
+    border: none;
+    width: 90%;
+    height: 6vh;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 20px;
+
+}

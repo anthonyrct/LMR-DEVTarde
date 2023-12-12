@@ -1,0 +1,14 @@
+
+
+FUNÇÕES STRING:
+
+    No php caso esteja dando erro chamar as funções da string, utilize do mb_nomeDaFunção(), esta biblioteca caso der erro é porque precisamos instala-la na nossa maquina, mas antes vá no terminal e digite : "php -m", para verificar quais são as bibliotecas instaladas, caso não apareça "mbstring" realize o passo seguinte: 
+    
+
+    -Vá na pasta do seu servidor;
+    -Vá na pasta PHP;
+    -Entre na versão do PHP utilizada;
+    -Provavelmente irá ter uma pasta chamada mbstring;
+    -Para ativá-la, vá em php.in //Pode estar no seu servidor;
+    -Procure por "mbstring";
+    -Habilite-o retirando tag de comentário.
